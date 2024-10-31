@@ -1,0 +1,104 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Encabezado */
+.header {
+    width: 100%;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 24px;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Buscador */
+.search-section {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.search-section input {
+    width: 80%;
+    max-width: 500px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Galería de Imágenes en cuadrícula de dos columnas */
+.gallery {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden; /* Para ocultar imágenes que se desbordan */
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: none; /* Ocultar todas las imágenes por defecto */
+}
+
+.gallery img:first-child {
+    display: block; /* Mostrar solo la primera imagen al cargar */
+}
+
+/* Menú Desplegable */
+.menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #333;
+    border-radius: 8px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 10px;
+}
+
+.menu li {
+    margin: 10px 0;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Pie de página */
+.footer {
+    width: 100%;
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+}
