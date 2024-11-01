@@ -8,10 +8,11 @@
     <script src="script1.js" defer></script>
 </head>
 <body>
-    <!-- Encabezado con logo e ícono de menú -->
+    <!-- Encabezado con logo, ícono de menú e ícono de perfil -->
     <header class="header">
-        <h1>FAIRY</h1>
+        <h1>Fairy</h1>
         <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <img src="img/img login.jpg" alt="Ícono de perfil" class="profile-icon" onclick="toggleLoginForm()">
     </header>
 
     <!-- Buscador -->
@@ -28,19 +29,42 @@
         <img src="img/img 5.jpg" alt="Imagen 5">
     </section>
 
+    <!-- Formulario de Inicio de Sesión -->
+    <div id="loginForm" class="login-form">
+        <button class="close-btn" onclick="toggleLoginForm()">✖</button>
+        <h2>Iniciar Sesión</h2>
+        <form onsubmit="handleLogin(event)">
+            <input type="email" id="email" placeholder="Correo electrónico" required>
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+        <p>¿No tienes cuenta? <a href="#" onclick="toggleRegisterForm()">Regístrate aquí</a></p>
+    </div>
+
+    <!-- Formulario de Registro -->
+    <div id="registerForm" class="login-form" style="display: none;">
+        <button class="close-btn" onclick="toggleRegisterForm()">✖</button>
+        <h2>Registro</h2>
+        <form onsubmit="handleRegister(event)">
+            <input type="email" id="registerEmail" placeholder="Correo electrónico" required>
+            <input type="password" id="registerPassword" placeholder="Contraseña" required>
+            <button type="submit">Registrarse</button>
+        </form>
+    </div>
+
     <!-- Menú Desplegable de Secciones -->
     <nav id="menu" class="menu">
         <ul>
-            <li><a href="#ropa">Ropa</a></li>
-            <li><a href="#accesorios">Accesorios</a></li>
-            <li><a href="#ofertas">Ofertas</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="ropa.html" target="_blank">Ropa</a></li>
+            <li><a href="accesorios.html" target="_blank">Accesorios</a></li>
+            <li><a href="ofertas.html" target="_blank">Ofertas</a></li>
+            <li><a href="contacto.html" target="_blank">Contacto</a></li>
         </ul>
     </nav>
 
     <!-- Pie de Página -->
     <footer class="footer">
-        <p>&copy; 2024 Moda Trendy. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Fairy. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
