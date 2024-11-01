@@ -102,3 +102,147 @@ body {
     text-align: center;
     margin-top: 20px;
 }
+
+/* Encabezado */
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Ícono de perfil en la esquina superior derecha */
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 40px; /* Cambié de 20px a 40px para moverlo más a la izquierda */
+}
+
+
+/* Formulario de inicio de sesión y registro */
+.login-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 10;
+}
+
+.login-form h2 {
+    margin-bottom: 15px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.login-form button {
+    padding: 10px 15px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Botón de cierre en el formulario */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.product-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product {
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Galería de productos en formato de columna */
+.product-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Estilo de cada producto */
+.product {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    width: 100%;
+    max-width: 500px; /* Ajuste de ancho para un formato vertical */
+    margin: 0 auto;
+}
+
+/* Efecto hover para todo el contenedor del producto */
+.product:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen del producto, tamaño fijo y sin sobreposición */
+.product img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+/* Contenedor de información del producto */
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.product-info h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.product-info p {
+    margin: 0;
+    color: #666;
+}
+
+
